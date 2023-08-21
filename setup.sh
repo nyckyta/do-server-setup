@@ -11,3 +11,5 @@ sh ./get-docker.sh
 systemctl enable docker.service
 systemctl enable containerd.service
 echo '{"log-driver":"local"}' | cat > /etc/docker/daemon.json
+systemctl restart docker.service
+systemctl restart containerd.service
